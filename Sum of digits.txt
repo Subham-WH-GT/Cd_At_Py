@@ -1,0 +1,4 @@
+number=input("Enter a two digit number:\n")
+num1=int(number[0])
+num2=int(number[1])
+print("Sum of the digits are:",num1+num2)
