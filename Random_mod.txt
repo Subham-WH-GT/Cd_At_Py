@@ -1,0 +1,17 @@
+import random
+a=random.randint(1,10) #returns integer from 1 to 10 randomly;including randomly
+print("Random number is:",a)
+b=random.randrange(1,10) #returns integer where 1 is included but 10 is not included
+print("Random number using range is:",b)
+c=random.random() #returns floating number from 0.0 to 1.0 but 1.0 is not included
+print("Random number using 'random()' is:",c)
+d=random.uniform(2,23) #works like random, but you can define your own argument
+print("Random number using 'uniform()' is:",d)
+
+#chosing a random number from list:
+l=[1,23,32,34,543,23]
+print("Selecting Random number from list is:",random.choice(l))
+
+#shuffle the list-->
+random.shuffle(l)
+print("After shuffling list is:",l)

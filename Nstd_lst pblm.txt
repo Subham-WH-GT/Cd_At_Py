@@ -1,0 +1,15 @@
+Q. given a 3*3 matrix, take position from the user and replace 1 with '#' in the mentioned position 
+
+lists0=[1,1,1]
+lists1=[1,1,1]
+lists2=[1,1,1]
+matrix=[lists0,lists1,lists2]
+position=input("Enter the positon to hide your money: ")
+row_pos=(int(position[0]))-1
+col_pos=(int(position[1]))-1
+if(row_pos>2 or col_pos>2):
+    print("Position Out of Bound")
+else:    
+    matrix[row_pos][col_pos]='#'
+    print(matrix)
+

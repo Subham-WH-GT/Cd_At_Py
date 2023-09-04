@@ -1,0 +1,32 @@
+import random
+lists1=[1,2,3]
+print("1-->Rock || 2-->Paper || 3-->Scissor")
+player1=int(input("Enter your choice:"))
+#player1=random.choice(lists1)
+player2=random.choice(lists1)
+lists2=[player1,player2]
+#print("Player1-->",player1)
+#print("Player2-->",player2)
+if((lists2[0]==1 or lists2[1]==1) and (lists2[1]==2 or lists2[0]==2)):
+    if(lists2[0]==2):
+        print("Player1-->Paper\nPlayer2-->Rock\nPlayer1 WINS!")
+    else:
+        print("Player1-->Rock\nPlayer2-->Paper\nPlayer2 WINS!")
+
+elif((lists2[0]==1 or lists2[1]==1)and(lists2[0]==3 or lists2[1]==3)):
+    if(lists2[0]==1):
+        print("Player1-->Rock\nPlayer2-->Scissor\nPlayer1 WINS")
+    else:
+        print("Player1-->Scissor\nPlayer2-->Rock\nPlayer2 WINS")
+elif(lists2[0]==lists2[1]):
+        if(lists2[0]==1):
+            print("Player1=Rock\nPlayer2=Rock\nDrawn")
+        elif(lists2[0]==2):
+             print("Player1=Paper\nPlayer2=Paper\nDrawn")
+        else:
+            print("Player1=Scissor\nPlayer2=Scissor\nDrawn")
+else:
+    if(lists2[0]==2):
+        print("Player1=Paper\nPlayer2=Scissor\nPlayer2 WINS!")
+    else:
+        print("Player1=Paper\nPlayer2=Scissor\nPlayer2 WINS!")

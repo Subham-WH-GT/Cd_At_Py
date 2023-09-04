@@ -1,0 +1,6 @@
+number=[1,[2,3],4,5]
+print("Program to print the elements of the nested List:")
+print("Nested List block is:")
+print(number[1])
+print("Individual elements of the Nested list is:")
+print(number[1][0],number[1][1])
