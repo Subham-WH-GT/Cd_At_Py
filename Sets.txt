@@ -1,0 +1,26 @@
+set1={1,2,-1,3,1,2}
+print(set1)
+list1=[1,1.23,0]
+
+#Operations in sets:
+#-->Union
+set2={'subham',1,9,'shruti'}
+set3={'shruti',1,3,True}
+print(set2.union(set3)) #This syntx can be used if the item passed as argument is either set or or list or tuple
+print(set2.union(list1))
+
+#union syntx set2
+print(set2|set3|set1) #This syntx can be used when both the items are strictly sets.
+
+#Updating or adding two sets
+set2.update(set1) #Updating and printing cannot be done in same line
+print(set2)
+
+#Intersection in set2
+set4={1,2,'subham'}
+set5={'subham',-1,0}
+print(set4.intersection(set5))
+#Operator for intersection
+print(set4&set5)
+set1.intersection_update(set2) #this updates set 1 and the element of the set1 is now the intersection set1 and set2
+print(set1)

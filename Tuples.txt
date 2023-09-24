@@ -1,0 +1,19 @@
+tuple1=(1,2,3,-1)
+tuple2=("jenny",True,-2)
+print(tuple1)
+print(tuple2)
+tuple3=(2,)
+tuple4=(2)
+print(type(tuple3))
+print(type(tuple4))
+print(tuple2[0])
+#tuple1[0]=23 --->  Not possible, since tuples are immutable
+print(tuple1)
+
+#nesting Tuples
+tuple5=(tuple1,tuple2) #here length of the tuple is 2
+print(tuple5)
+
+#concatenating tuples
+tuple6=(tuple1+tuple2) #here length of the tuple is length of tuple1+length of tuple 2
+print(tuple6)

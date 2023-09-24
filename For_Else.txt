@@ -1,0 +1,24 @@
+# For_else Loop in py
+mylist=[1,2,5,16,8]
+
+#Note: The else block is executed on;y when the for loop has completed entirely and successfully;
+
+for i in mylist:
+    print(i)
+else:
+    print("Iteraterd Successfully") #here this block gets executed since the for is traversed completely and successfully
+    
+for i in mylist:
+    print(i*i)
+    if i==16:
+        break;
+else:
+    print("Iterated Successfully") #here it doesnot gets executed successfully;
+    
+for i in mylist:
+    print(i)
+    if i==8:
+        break
+else:
+    print("Iterated Successfully")  #here we traversed the entire list but since at the last traversal the loop gets break
+                                    # the else block is not executed...

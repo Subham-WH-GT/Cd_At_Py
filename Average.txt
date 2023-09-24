@@ -1,0 +1,18 @@
+# Calculate average of the ages in the lists
+# points: -->Dont  use length(),sum() functions
+#        -->return answer in terms of whole number.
+#       -->Heights will be user input.
+
+heights=input("Enter the heights seperated by spaces: ")
+height_list=heights.split()
+count=0;
+average=0
+for height in height_list:
+    count=count+1
+for i in range(0,count):
+    height_list[i]=int(height_list[i])
+    average=average+height_list[i]
+average=average/count 
+average=round(average)
+print("Average of the given heights is:",average)    
+    

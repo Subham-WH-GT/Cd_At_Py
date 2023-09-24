@@ -1,0 +1,25 @@
+#For loop i py
+
+myList=["Subham","me",23,-1]
+for name in myList:
+    print(name)
+    
+mystring="Subham Saha"
+for name in mystring:
+    print(name)
+    
+#Calculating square of each items in the list
+list1=[1,2,3,4,5]
+
+for i in list1:
+    print(i*i)
+    
+#update the list containing square of the lists
+
+lists2=[1,2,3,4,5]
+i=0
+for elements in lists2:
+    lists2[i]=elements**2
+    i=i+1  # Note: i++ doesn't work in python
+print(lists2)    
+   
