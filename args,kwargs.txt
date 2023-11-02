@@ -1,0 +1,14 @@
+def add(*args):
+    sums=0
+    for i in args:
+        sums+=i
+    print('Sum is:',sums)
+add(1,2)
+add(1,2,3)
+add(3,4,5,10)
+
+def info(**kwargs):
+    for key,value in kwargs.items():
+        print(key,value)
+info(name="Subham",age="21")
+info(name="Rahul",age="20",dept="CSE")

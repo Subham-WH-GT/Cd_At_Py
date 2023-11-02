@@ -1,0 +1,50 @@
+def encryption(message,steps):
+    enc_mess=""
+    for i in range(len(message)):
+        if(message[i]==" "):
+            enc_mess+=" "
+            continue;
+        ch=ord(message[i])
+        ch+=steps
+        if(ch>122):
+            ch = 97 + abs(((ch%97)-26))
+        enc_mess+=chr(ch)    
+    print('Your Encrypted message is',enc_mess)
+
+import sys
+def decryption(message,steps):
+    dec_mess=""
+    for i in range(len(message)):
+        if(message[i]==" "):
+            dec_mess+=" "
+            continue;
+        ch=ord(message[i])
+        ch-=steps
+        if(ch<97):
+            ch=122- abs(((122%ch)-26))
+        dec_mess+=chr(ch)
+    print('Your Decrypted message is:',dec_mess)    
+
+while(True):
+    choose=input('Type "enc" for encryption or "dec" for decryption: ')
+    if(choose !='enc' and choose !='dec'):
+        print('Invalid choice')
+        sys.exit() 
+    steps=int(input('Enter steps number: '))
+    mess=input('Enter your message: ')
+    if(choose=='enc'):
+        encryption(mess,steps)
+    elif(choose=='dec'):
+        decryption(mess,steps)
+    con=input('Do you want to continue yes/no: ')
+    if(con=='yes'):
+        print()
+        continue;
+    elif(con=='no'):
+        break;
+    else:
+         print('Invalid choice')
+         sys.exit() 
+
+
+    

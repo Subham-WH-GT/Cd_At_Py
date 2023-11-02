@@ -1,0 +1,15 @@
+# Print maximum number from the list
+
+numbers=input("Enter the numbers of the list seperated by space:")
+numbers_list=numbers.split()
+list_length=len(numbers_list)
+for i in range(0,list_length):
+    numbers_list[i]=int(numbers_list[i])
+ans=numbers_list[0]
+for num in numbers_list:
+    if num>ans:
+        ans=num
+
+print("Maximum number is:",ans)        
+        
+    

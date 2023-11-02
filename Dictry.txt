@@ -1,0 +1,20 @@
+#dictionary
+dic={
+    "Rahul":2,
+    "Sandeep":5,
+    "Manisha":0
+}
+
+print(dic) #printing entire dictionary
+print(dic["Rahul"]) #Printing any particular desired value of a key
+
+#Nested dictionary
+
+dict2={
+    "Rakesh":{"Roll":23,"course":"python","age":21},
+    "Mahesh":{"Roll":40,"course":"java","age":22}
+}
+print(dict2)
+print(dict2["Mahesh"]['course'])
+dict2["Mahesh"]["phone_no"]='982******3' #adding new key
+print(dict2)

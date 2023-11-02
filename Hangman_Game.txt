@@ -1,0 +1,67 @@
+import random
+
+word_list=['apple','flower','laptop','cricket','school','friend','little','killer','zebra','divine']
+select=random.choice(word_list)
+count=6
+
+l=len(select)
+empty_list=[]
+print('Youe have',count,'chances')
+for i in range(l):
+    empty_list.append('_')
+print(empty_list)    
+while(count>0):
+    take=input('Guess the letter: ')
+    idx=0
+    flag=True
+    for j in range(l):
+        if(select[j]==take):
+            flag=False
+            empty_list[j]=take
+    
+    if(not flag):
+        print(empty_list) 
+           
+    if(flag):
+        
+        print(take,'was not present')
+        count-=1
+        print('Youe have',count,'chances')
+        if(count==5):
+            print('________')
+            print('    |')
+            print('    O')
+        elif(count==4):
+            print('________')
+            print('    |')
+            print('   \O')
+        elif(count==3):
+            print('________')
+            print('    |')
+            print('   \O/')
+        elif(count==2):
+            print('________')
+            print('    |')
+            print('   \O/')
+            print('    |')
+        elif(count==1):
+            print('________')
+            print('    |')
+            print('   \O/')
+            print('    |') 
+            print('   / ')
+        print('')
+        print(empty_list)
+    if(empty_list.count('_')==0):
+        print('You WON!')
+        break;
+else:
+    print('You are Hanged!')
+    print('________')
+    print('    |')
+    print('   \O/')
+    print('    |')
+    print('   / \ ')
+    
+
+

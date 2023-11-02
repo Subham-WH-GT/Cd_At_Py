@@ -1,0 +1,29 @@
+
+#Basic Syntax for while loop
+count=1;
+while(count<=3):
+    print("Count is now:",count)
+    count+=1;
+ 
+ #Syntax for while else statement...
+ #else statement gets executed only when the while loop ends by is own without forced break.
+ #in while else 2 since we have force break the while loop the else part doesnot gets executed.
+    
+count2=1
+while(count2<=3):
+    print("Count2 is:",count2)
+    count2+=1;
+else:
+    print("In while else statement.")
+    
+while(count2<=6):
+    print("Count2 is now:",count2)
+    count2+=1
+    
+    if(count2==6):
+        break;
+else:
+    print("In while else statement 2.")
+    
+    
+    

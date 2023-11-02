@@ -1,0 +1,9 @@
+sums=0
+while (True):
+    add=int(input("Enter number OR 0 to exit:"))
+    if(add==0):
+        print('Final sum is:',sums)
+        break;
+    else:
+        sums+=add
+        print('Sum is',sums)
