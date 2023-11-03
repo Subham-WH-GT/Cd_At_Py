@@ -1,0 +1,20 @@
+list1=[1,2,3]
+list2=['Subham','Rohan','Rithik']
+zipped=zip(list1,list2)
+for items in zipped:
+    print(items) 
+print()
+#when the multiple lists is of different length zipped object will take the minimum length
+x=[1,3,4,5,6]
+y=[True,False]
+z=['Ram','Shyam','Manish']
+zipped2=zip(x,y,z)
+for items in zipped2:
+    print(items) 
+print()
+l=[1,'subham',True]
+t=('subham',2,False)
+zipped3=zip(l,t)
+for items in zipped3:
+    print(items)
+#the zipped file is index based starting from 0    

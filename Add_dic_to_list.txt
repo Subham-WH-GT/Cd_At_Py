@@ -1,0 +1,26 @@
+#Given a list containing dictionaries, create a function to add an entry of new student in the list
+
+given_list=[
+   {
+     "Name":"Subham",
+     "Age":21,
+     "Course":"Python"
+   },
+   {
+     "Name":"Rithik",
+     "Age":23,
+     "Course":"JAVA"
+   }
+]
+print(given_list)
+
+def add_Entry(name,age,course):
+    temp_dict={
+        "Name":name,
+        "Age":age,
+        "Course":course
+    }
+    given_list.append(temp_dict)
+
+add_Entry(name="Abhisek",age=18,course="C++")
+print(given_list)

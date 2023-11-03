@@ -1,0 +1,37 @@
+import sys
+def cal(input1,input2,ope):
+    if(ope=='*'):
+        retval=input1*input2
+    elif(ope=='+'):
+        retval=input1+input2
+    elif(ope=='/'):
+        retval=input1/input2
+    elif(ope=='-'):
+        retval=input1-input2
+    
+       
+    return retval    
+
+
+inp1=int(input('Enter first number: '))
+while(True):
+    op=input('Pick the Operator:\n*\n+\n/\n-\n')
+    if(op !='*' and op !='-' and op !='/' and op !='+'):
+         print('Invalid Choice')
+         sys.exit()
+    inp2=int(input('Enter second number: '))
+    answer=cal(input1=inp1,input2=inp2,ope=op)
+    print('Output: ',answer)
+    print()
+    take=input("c-> Continue with previous output\nn->Continue new calculation\nx->To exit\n")
+    if(take=='c'):
+        inp1=answer
+    elif(take=='n'):
+        inp1=int(input('Enter first number: '))
+    elif(take=='x'):
+        sys.exit()
+    else:
+        print('Invalid Choice')
+        sys.exit()
+    
+       
