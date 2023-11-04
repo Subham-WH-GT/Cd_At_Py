@@ -1,0 +1,31 @@
+import random
+import sys
+print('Let me think a number between 1-50')
+num=random.randint(1,50)
+#print(num)
+diff=(input('Choose difficuilty level(hard or easy): ')).lower()
+if(diff=='easy'):
+    chances=10
+    
+elif(diff=='hard'):
+    chances=5
+else:
+    print('Invalid choice!')
+    sys.exit()
+while(chances>0):
+    print()
+    print(f"you have {chances} chances")
+    take=int(input('Guess the Number: '))
+    chances-=1
+    if(take>num):
+        print('Guessed too high')
+    elif(take<num):
+        print('Gussed too low')
+    elif(take==num):
+        print('You gussed the right number')
+        sys.exit();
+    else:
+        print('Wrongly guessed')
+        print('Abandoned')
+        break;
+print('You lost the Game')    

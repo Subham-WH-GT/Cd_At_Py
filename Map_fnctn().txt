@@ -1,0 +1,17 @@
+#Use_case of map function
+num_list=[1,2,3,4,5]
+def square(n):
+    return n*n
+return_values=map(square,num_list) #the square function doesnt take explit arguments rather the iterable 
+print(list(return_values))         #rather the items of the second argument passed for map function works as argument
+
+
+
+#when multiple iterable are passed
+def fun_call(n,m):
+    return n*m;
+
+my_list=[1,2,3,4,5]
+my_tuple=(6,7,8,9,10,10)
+ans=map(fun_call,my_list,my_tuple)
+print(list(ans))
