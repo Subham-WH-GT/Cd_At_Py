@@ -1,0 +1,23 @@
+#way 1
+class profile:
+    pass
+ob1=profile()
+ob1.name="Subham"
+ob1.adress="WestBengal"
+print(ob1.name,ob1.adress)
+
+#creating constructor in a class
+class cons:
+    def __init__(self):
+        print('Within Constructor')
+
+ob1=cons()
+ob2=cons() #Every time when we will create an object the Constructor will be called
+
+#optimisimg way1 through way2 by creating attributs within the class
+class profile2:
+    def __init__(self,name,adress):
+        self.name=name
+        self.adress=adress
+ob3=profile2('subham','westBengal') 
+print(ob3.name)

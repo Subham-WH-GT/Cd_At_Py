@@ -1,0 +1,12 @@
+#Adding methods in a class...
+
+class my_class:
+    def __init__(self,name,pin):
+       self.Name=name 
+       self.code=pin 
+    def display(self):
+        print("Hi",self.Name)
+    
+obSub=my_class("Subham",'742123')
+print(obSub.Name,obSub.code)
+obSub.display()
