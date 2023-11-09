@@ -1,0 +1,19 @@
+# Inheritance
+
+class _base:
+    def get_me(self):
+        print('In base class')
+class _derived(_base):
+    #when derived class will hav its own method with same as base class, 
+    #overriding occurs and derived class method is called
+    def get_me(self):
+        super().get_me() #to get the method of the base class
+        print('I am in derived class')
+    #when we define __init__function for derived class, then for derived 
+    #class to access base class it has to use super function to use base class attributes
+    
+derived1=_derived()
+derived1.get_me() #get_me is defined for base class, but through inheritance we can use
+                  #it for derived class too...
+                  
+                  

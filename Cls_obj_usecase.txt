@@ -1,0 +1,23 @@
+class circle:
+    pi=3.14
+    def __init__(self,_radius):
+        self.radius=_radius
+    def circumference(self):
+        cir=2*self.pi*self.radius
+        print('Circumference is:',cir)
+    def area(self):
+        _area=self.pi*self.radius*self.radius
+        print(f"Area is: {_area}")
+
+class rectangle:
+    def __init__(self,l,b):
+        self.length=l
+        self.breadth=b
+    def area_rect(self):
+        area=self.length*self.breadth
+        print("Area of the rectangle is:",area)
+circle_1=circle(2.5)
+circle_1.circumference()
+circle_1.area()
+rect_1=rectangle(5.2,3.4)
+rect_1.area_rect()
