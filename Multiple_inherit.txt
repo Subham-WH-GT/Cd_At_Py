@@ -1,0 +1,41 @@
+## MRO-->Method Resolution Order, it refers to the order in which a class is given preference when a method
+# is called. i.e if the same method is present in derived class and all other base class...the preference is-->
+# Derived class -> 1st base class (arg_1) -> 2nd base class (arg_2) -> so on.
+
+class human:
+    def __init__(self):
+        print("I am a Human")
+    def _human(self):
+        print('Within Human')
+    def work(self):
+        print('Here Human is working.')
+    def people(self):
+        print('We all are people under human.')    
+class male:
+    def __init__(self):
+        print('I am male')
+    def _male(self):
+        print('Within male')
+    def work(self):
+        print('Here Male is working.')
+    def people(self):
+        print('We all are people under male.')    
+class boy(human,male):
+    def __init__(self):
+        print('I am a boy')
+    def people(self):
+        print('We all are people under boy.')
+        
+boy_1=boy()
+boy_1._human() #inheriting from human base class
+boy_1._male()  #inheriting from male base class
+#when both the base class have same mathod name, derived class will take the method of the class
+# which is passed as argument 1 while inheriting...
+boy_1.work()
+
+#but this approach is not a good practice, other way is:
+male.work(boy_1)
+#If the derived class have the same method as base classes on calling the mathod, it will
+#trigger the derived class method.
+boy_1.people()
+print(boy.mro())

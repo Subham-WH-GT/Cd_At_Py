@@ -1,0 +1,28 @@
+#If both the derived classes and base class have init function then to access the init of te base
+#classes we nedd to call it explicitely with in the derived class...ex-->
+
+class Grand_p:
+    def __init__(self,heart):
+        self.heart=heart
+    def grand_work(self):
+        print('Here Grand_Parent Works!')
+class Parent(Grand_p):
+    def __init__(self,num_eyes):
+        self.eyes=num_eyes
+    def parent_work(self):
+        print('Here Parent works!')
+class son(Parent):
+    def __init__(self,can_dance,heart_nums,eyes_nums):
+        Grand_p.__init__(self,heart_nums)
+        Parent.__init__(self,eyes_nums)
+        self.dance=can_dance
+    def son_work(self):
+        print('Here Son Works!')
+son1=son(True,1,2)
+son1.grand_work() #This is how multi-level inheritance works! Son is inheriting from grandP
+print(son1.heart)
+print(son1.eyes)
+print(son1.dance)
+
+
+        
