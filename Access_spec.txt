@@ -1,0 +1,18 @@
+class student:
+    def __init__(self,name,roll,age):
+        self.name=name    #No underscore signifies it is public access spe.
+        self._roll=roll   #Underscore before attribute name signifies it is protected access spe.
+        self.__age=age   #Double underscore signifies it is private instance variable
+    def display(self):
+        print('I am',self.name,'from student class')
+        print("Age is",self.__age)
+
+class branch(student):
+    pass
+s1=student('Subham',23,21)
+print(s1.name)
+s1.display()
+
+b1=branch('Subham',23,21)
+print(b1.name) #Inheriting the public instance variable
+print(b1._roll) #Inheriting the protected instance variable
