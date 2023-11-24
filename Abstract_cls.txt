@@ -1,0 +1,23 @@
+from abc import ABC,abstractmethod
+class vehicle(ABC):
+    def __init__(self,n):
+        self.tyres=n
+    @abstractmethod
+    def start(self):
+        pass
+
+class bike(vehicle):
+    def __init__(self,n):
+        super().__init__(n)
+    def start(self):
+        print("Starting Your Bike.")
+        
+class car(vehicle):
+    def __init__(self,n):
+        self.tyres=4
+    def start(self):
+        print('Starting your Car')
+bike1=bike(2)
+bike1.start()
+car1=car(4)
+car1.start()
