@@ -1,0 +1,26 @@
+#method overloading
+#Unlike in c++ we cannot define multiple methods with same name in a class to achieve method overloading
+
+# class met:
+#     def add(self,a,b):
+#         return a+b
+#     def add(self,a,b,c):
+#         return a+b+c
+
+
+# m1=met()
+# m1.add(1,2)
+# m1.add(1,2,3)  #This doesnot works in python
+
+class cal:
+    def add(self,*args):
+        total=0
+        for i in args:
+            total+=i
+        return total
+        
+cal1=cal()
+print(cal1.add(1,2))
+print(cal1.add(2,3,5))
+
+
