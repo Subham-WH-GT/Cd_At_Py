@@ -1,0 +1,12 @@
+#method overriding
+
+class human:
+    def type(self):
+        print('I am Human')
+class man(human):
+    def type(self):
+        print('I am Person') #man is overriding the type method
+        super().type()
+    
+man1=man()
+man1.type()
